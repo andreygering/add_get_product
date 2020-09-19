@@ -2,14 +2,84 @@
 <html>
 	<head>
 		<title>Get Product</title>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+										<!-- Style/CSS -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+		<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+		<style type="text/css">
+			body { background: #00CED1;
+			 }
+			 h1 { color:#696969;
+			 	  font-size: 80px;
+			 	  font-family: Fugaz One;
+			 	  margin-left: 150px; 
+			 }
+			 h2 { color:#2F4F4F;
+			 	  font-size: 70px;
+			 	  font-family: Fugaz One;
+			 	  margin-top: -100px;
+			 	  margin-left: 750px;
+			 	}
+			 p {  color:white;
+			 	  font-size:60px;
+			 	  font-family: Wendy One;
+			 	  margin:100px 300px; 
+			 	}
+			 input[type=text],input[type=number], select {
+				  width: 50%;
+				  padding: 29px 20px;
+				  margin: 8px 0;
+				  display: inline-block;
+				  border: 1px solid #ccc;
+				  border-radius: 4px;
+				  box-sizing: border-box;
+				  font-size: 20px;
+				}
+			 input[type=button], input[type=submit], input[type=reset]  {
+				  background-color: #FFD700;
+				  border: none;
+				  color: white;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 30px;
+				  cursor: pointer;
+				  -webkit-transition-duration: 0.4s; 
+				  transition-duration: 0.4s;
+				  font-family: Wendy One;
+								  }
+			.btn-efect:hover {
+  					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
+			#button1 {padding: 35px 45px;  margin-top: -90px; margin-left:  0px; z-index:2;position: absolute; }
+			#button2 {padding: 35px 36.5px;  margin-top: -90px; margin-left:  185px; z-index:1;position: absolute; }
+			#button3 {padding: 25px 81.5px;  margin-top: -108px; margin-left:  660px; z-index:1;position: absolute; }
+
+			div {
+				margin-left: 100px;
+				margin-top: 200px;
+			}
+
+	
+		</style>
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+										<!-- HTML -->
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
 	</head>
 	<body>
-		<h1>This is page for get product</h1>
-				{{ get_item }}
-		<form action="{% url 'result' %}">
-			<input type="text" name="product_name_finded" placeholder="Product Name">
-			<input type="number" step="0.01" name="product_price_finded" placeholder="Product Price">
-			<input type="submit" value="Search">
-			<input type="reset" name="reset" value="Reset">
+		<h1>This is page for </h1>
+		<h2>search product</h2>
+		<div>
+			<form action="{% url 'result' %}" method="GET">
+				<input type="text" name="product_name_finded" placeholder="Product Name">
+				<input type="number" step="0.01" name="product_price_finded" placeholder="Product Price">
+				<input class="btn-efect" id="button1" type="submit" value="Search">
+				<input class="btn-efect" id="button2" type="reset" name="reset" value="Reset">
+			</form>
+			<br>
+			<form method="GET" action="{% url 'home_page' %}">
+				<input class="btn-efect" id="button3" type="submit" name="home_button" value="HOME PAGE">
+			</form>
+		</div>
 	</body>
 </html>
