@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Product</title>
+	</head>
+	<body>
+		<h1>This is page for add product</h1>
+				{{ add_item }}
+		<form action="{% url 'confirm' %}">
+			<input type="text" name="product_name" placeholder="Product Name">
+			<input type="number" name="product_price" placeholder="Product Price">
+			<input type="submit" value="Add">
+			<input type="reset" name="reset" value="Reset">
+		</form>
+	</body>
+</html>
