@@ -23,4 +23,5 @@ urlpatterns = [
     path('add_product/', views.add_product,name='add_product'),
     path('get_product/', views.get_product,name='get_product'),
     path('confirm/', views.confirm, name='confirm'),
+    path('result/', views.result, name='result'),
 ]
